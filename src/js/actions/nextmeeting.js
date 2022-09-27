@@ -97,7 +97,7 @@ export default class NextMeeting extends Action {
             this.setImage(context, imageCache.nextMeetingRed)
           }
           if (!this.marquee.active) {
-            this.setTitle(context, `${sec2time(difference)}`)
+            this.setTitle(context, `${this.currentEvent.summary.substr(0, 10)}\n${this.currentEvent.summary.substr(10, 10)}\n\n${sec2time(difference)}`)
           }
         } else {
           if (this.currentImage !== 'nextMeeting') {
